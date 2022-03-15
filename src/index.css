@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Outfit", sans-serif;
+}
+
+.ant-collapse-icon-position-right > .ant-collapse-item > .ant-collapse-header {
+  font-size: 17px !important;
+  font-weight: 600 !important;
+}
+
+svg {
+  vertical-align: baseline !important;
+}

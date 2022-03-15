@@ -1,0 +1,251 @@
+.floatingDiv {
+  position: absolute;
+  width: 820px;
+  height: 780px;
+  background: transparent linear-gradient(270deg, #86d400 0%, #59a506 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 20px;
+  opacity: 1;
+  margin-top: 0px;
+  margin-left: 140px;
+  z-index: 1;
+}
+.circle {
+  position: absolute;
+  height: 260px;
+  width: 260px;
+  border-radius: 50%;
+  background: #59a506 0% 0% no-repeat padding-box;
+  margin-top: 500px;
+  margin-bottom: 48px;
+  margin-left: 51px;
+}
+.rectangle {
+  position: absolute;
+  width: 87px;
+  height: 87px;
+  transform: matrix(0.87, -0.5, 0.5, 0.87, 0, 0);
+  background: #59a506 0% 0% no-repeat padding-box;
+  margin-left: 540px;
+  margin-top: 98px;
+}
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 35px solid transparent;
+  border-bottom: 148px solid #59a506;
+  background: #59a506 0% 0% no-repeat padding-box;
+  transform: matrix(2, 2, 0, -1, 60, 30);
+  margin-top: 466px;
+  margin-left: 661px;
+}
+.text-container {
+  position: absolute;
+  width: 552px;
+  margin-top: 248px;
+  margin-left: 135px;
+}
+.text-container-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+.company-name {
+  width: 245px;
+  height: 64px;
+  text-align: left;
+  font: normal normal 600 51px/64px Outfit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.company-name-second-line {
+  width: 447px;
+  height: 64px;
+  text-align: left;
+  font: normal normal 600 51px/64px Outfit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+.company-name-third-line-para {
+  width: 552px;
+  height: 104px;
+  text-align: left;
+  font: normal normal normal 16px/28px Outfit;
+  letter-spacing: 0px;
+  color: #ffffff;
+  opacity: 1;
+}
+@media only screen and (max-width: 1600px) {
+    .floatingDiv {
+        width: 745px;
+        height: 680px;
+        margin-left: 90px;
+      }
+      .circle {
+        height: 230px;
+        width: 230px;
+        margin-top: 400px;
+      }
+      .rectangle {
+        width: 57px;
+        height: 57px;
+      }
+      .triangle {
+        border-left: 20px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 148px solid #59a506;
+        background: #59a506 0% 0% no-repeat padding-box;
+        transform: matrix(2, 2, 0, -1, 60, 30);
+        margin-top: 366px;
+        margin-left: 561px;
+      }
+      .text-container {
+        width: 552px;
+        margin-top: 160px;
+        margin-left: 135px;
+      }
+      .company-name {
+        font: normal normal 600 45px/64px Outfit;
+      }
+      .company-name-second-line {
+        font: normal normal 600 45px/64px Outfit;
+      }
+      .company-name-third-line-para {
+        font: normal normal normal 14px/28px Outfit;
+      }
+}
+
+@media only screen and (max-width: 1440px) {
+    .floatingDiv {
+        width: 645px;
+        height: 660px;
+        margin-left: 100px;
+      }
+      .circle {
+        height: 210px;
+        width: 210px;
+        margin-top: 400px;
+      }
+      .rectangle {
+        width: 47px;
+        height: 47px;
+      }
+      .triangle {
+        border-left: 15px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 148px solid #59a506;
+        background: #59a506 0% 0% no-repeat padding-box;
+        transform: matrix(2, 2, 0, -1, 60, 30);
+        margin-top: 366px;
+        margin-left: 490px;
+      }
+      .text-container {
+        width: 552px;
+        margin-top: 160px;
+        margin-left: 135px;
+      }
+      .company-name {
+        font: normal normal 600 40px/64px Outfit;
+      }
+      .company-name-second-line {
+        font: normal normal 600 40px/64px Outfit;
+      }
+      .company-name-third-line-para {
+        width:414px;
+        font: normal normal normal 12px/28px Outfit;
+      }
+}
+
+
+@media only screen and (max-width: 1336px) {
+    .floatingDiv {
+        width: 545px;
+        height: 660px;
+        margin-left: 90px;
+      }
+      .circle {
+        height: 170px;
+        width: 170px;
+        margin-top: 400px;
+      }
+      .rectangle {
+        width: 47px;
+        height: 47px;
+        margin-left: 460px;
+      }
+      .triangle {
+        border-left: 15px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 148px solid #59a506;
+        background: #59a506 0% 0% no-repeat padding-box;
+        transform: matrix(2, 2, 0, -1, 60, 30);
+        margin-top: 366px;
+        margin-left: 400px;
+      }
+      .text-container {
+        width: 552px;
+        margin-top: 160px;
+        margin-left: 90px;
+      }
+      .company-name {
+        font: normal normal 600 37px/64px Outfit;
+      }
+      .company-name-second-line {
+        font: normal normal 600 37px/64px Outfit;
+      }
+      .company-name-third-line-para {
+        width:414px;
+        font: normal normal normal 12px/28px Outfit;
+      }
+}
+
+
+@media only screen and (max-width: 1024px) {
+    .floatingDiv {
+        width: 445px;
+        height: 560px;
+        margin-left: 20px;
+      }
+      .circle {
+        height: 120px;
+        width: 120px;
+        margin-top: 400px;
+      }
+      .rectangle {
+        width: 37px;
+        height: 37px;
+        margin-left: 360px;
+      }
+      .triangle {
+        border-left: 10px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 148px solid #59a506;
+        background: #59a506 0% 0% no-repeat padding-box;
+        transform: matrix(2, 2, 0, -1, 60, 30);
+        margin-top: 366px;
+        margin-left: 300px;
+      }
+      .text-container {
+        width: 442px;
+        margin-top: 160px;
+        margin-left: 40px;
+      }
+      .company-name {
+        font: normal normal 600 30px/64px Outfit;
+      }
+      .company-name-second-line {
+        font: normal normal 600 30px/64px Outfit;
+      }
+      .company-name-third-line-para {
+        width:400px;
+        font: normal normal normal 12px/28px Outfit;
+      }
+}
+@media only screen and (max-width: 916px) {
+.floatingDiv{
+    display: none;
+}
+}
