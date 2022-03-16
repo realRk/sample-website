@@ -10,6 +10,7 @@
 }
 .sign-in-div {
   padding-bottom: 155px;
+  /* margin-left: 100px !important; */
 }
 .sign-up-email-input-style {
   left: 20px !important;
@@ -145,6 +146,11 @@
 .user-outlined{
   color:red
 }
+@media only screen and (min-width: 1605px) {
+  .sign-in-div {
+    /* padding-bottom: 155px; */
+    margin-left: 100px !important;
+}}
 @media only screen and (max-width: 1600px) {
   .sign-in-div {
     margin-left: 125px;

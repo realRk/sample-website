@@ -1,12 +1,12 @@
 import "./App.css";
-import { Layout, Col } from "antd";
+import { Layout,Col } from "antd";
 import HeaderMenu from "./Components/HeaderMenu";
 import UserAuthenticationPage from "./Components/UserAuthentication";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route,Link } from "react-router-dom";
 import Booking from "./Pages/Booking";
 import MyJobs from "./Pages/Jobs";
 
-const { Header, Footer, Content } = Layout;
+const { Header,Footer,Content } = Layout;
 function App() {
   return (
     <div className="App">

@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Menu, Button, Row, Col } from "antd";
+import React, { useState } from "react";
+import { Button } from "antd";
 import "./index.css";
-import { MenuOutlined, CloseOutlined } from "@ant-design/icons";
+import { MenuOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 const HeaderMenu = () => {
   const [expanded, setExpand] = useState(false);
@@ -23,7 +23,6 @@ const HeaderMenu = () => {
       selectedButtonHamMenu.style.display = "none !important";
     }
   };
-  let screenWidth = window.screen.width;
   // useEffect(() => {
   //   alert(screenWidth)
   // }, [screenWidth]);
