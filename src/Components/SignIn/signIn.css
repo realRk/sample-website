@@ -548,7 +548,7 @@
 }
 @media only screen and (max-width: 1024px) {
   .sign-in-div {
-    margin-left: 0px;
+    margin-left: 50px;
   }
   .login-label-sign-in {
     margin-left: 15px !important;
