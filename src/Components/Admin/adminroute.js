@@ -17,9 +17,7 @@ const AdminRouter = () => {
     getCrops();
     getStates();
   }, []);
-  // useEffect(() => {
-  //   alert(window.location.pathname);
-  // }, [window.location.pathname]);
+
   const [defaultSelected, setDefaultSelected] = useState("product");
   useEffect(() => {
     let cropElement = document.querySelector("#crop");
@@ -29,6 +27,7 @@ const AdminRouter = () => {
 
     switch (defaultSelected) {
       case "crop":
+        getCrops()
         cropElement.style.background = "#f1f1f1 0% 0% no-repeat padding-box";
         cropElement.style.transition = "1s ease-in-out";
 
@@ -43,6 +42,7 @@ const AdminRouter = () => {
 
         break;
       case "product":
+        getProducts()
         cropElement.style.background = "none";
         cropElement.style.transition = "1s ease-in-out";
 
@@ -155,6 +155,18 @@ const AdminRouter = () => {
                     src={require("../../assets/user-logo.png")}
                   />
                   <span className="admin-side-options-user-label">Users</span>
+                </div>
+              </li>
+            </NavLink>
+            <NavLink to={"/"} onClick={()=>localStorage.clear()}>
+              <li onClick={() => setDefaultSelected("user")} id="user">
+                <div className="admin-side-options-individual logout">
+                  <img
+                    className="admin-side-options-log-out"
+                    alt="users"
+                    src={require("../../assets/logout.png")}
+                  />
+                  <span className="admin-side-options-log-out-label">Logout</span>
                 </div>
               </li>
             </NavLink>

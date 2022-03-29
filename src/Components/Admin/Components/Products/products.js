@@ -20,12 +20,22 @@ const Products = () => {
   const [newProductClicked, setNewProductClicked] = useState(false);
   const [newProductSlNo, setNewSlNo] = useState("");
   const [tableData, setTableData] = useState([]);
+  const [loader, setLoader] = useState(true);
+  const [current, setCurrent] = useState(1);
   //context
   const { state, createProduct, getProducts, updateProduct, deleteProduct } =
     useAdminUiContext();
   let { brands, products, states, user } = state;
+  let { count } = products;
+  let pagination = {
+    total: Number(count),
+    pageSize: 10,
+    current: current,
+  };
+  console.log(pagination);
   useEffect(() => {
     setTableData(products.data);
+    setLoader(false);
   }, [products]);
   //tableData
   const isEditing = (record) => record.id === editingKey;
@@ -55,24 +65,14 @@ const Products = () => {
       case "isActive":
         return (
           <div className="action-menu">
-            {/* {!(newProductClicked) && (
-              <div className="active-div">
-                <Switch
-                  // onChange={(value) => {
-                  //   changeActiveStatus(record, value);
-                  // }}
-                  defaultChecked={record.isActive ? true : false}
-                />
-                <span> {record.isActive ? "Active" : "In-Active"}</span>
-              </div>
-            )} */}
-
-            <div className="action-button-group">
+            <div className="action-button-group interact">
               {(newProductClicked && newProductSlNo === record.id) ||
               editingKey === record.id ? (
                 <React.Fragment>
                   <div
-                    onClick={newProductClicked?saveProduct:updateProductClicked}
+                    onClick={
+                      newProductClicked ? saveProduct : updateProductClicked
+                    }
                     className="save-button-div"
                     type="submit"
                   >
@@ -119,6 +119,7 @@ const Products = () => {
             </div>
           </div>
         );
+
       default:
         return <Input />;
     }
@@ -267,12 +268,15 @@ const Products = () => {
       title: "STATUS",
       key: "isActive",
       dataIndex: "isActive",
-      // editable: true,
+      editable: true,
       fixed: "right",
       width: 300,
       render: (_, record) => (
         <div className="action-menu">
-          {!(newProductClicked && newProductSlNo === record.id||editingKey ===record.id) && (
+          {!(
+            (newProductClicked && newProductSlNo === record.id) ||
+            editingKey === record.id
+          ) && (
             <div className="active-div">
               <Switch
                 onChange={(value) => {
@@ -399,17 +403,27 @@ const Products = () => {
       clearTimeout(typingTimer);
       if (search.value) {
         typingTimer = setTimeout(() => {
-            getProducts({search:search.value})
+          getProducts({ search: search.value });
         }, 1000);
-      }else{
-        getProducts()      }
+      } else {
+        getProducts();
+      }
     });
   }, []);
+  const handleTableChange = (pagination, filters, sorter) => {
+    let { current, pageSize, total } = pagination;
+    setCurrent(current);
+    let skip = (current - 1) * 10;
+    getProducts({ skip: skip });
+  };
   return (
     <div>
       {/* <Spin/> */}
       <div className="welocome-name-div">
-        <span className="welcome-name"> Welcome Charles Xavier </span>
+        <span className="welcome-name">
+          {" "}
+          {`Welcome ${localStorage.getItem("user_name")}`}{" "}
+        </span>
       </div>
       <div className="products-header-bar">
         <span className="products-label">Products</span>
@@ -462,9 +476,12 @@ const Products = () => {
               isActive: item.isActive,
             };
           })}
+          loading={loader}
           className="product-table"
           scroll={{ x: 760, y: 450 }}
           key="sl_no"
+          onChange={handleTableChange}
+          pagination={pagination}
         />
       </Form>
     </div>

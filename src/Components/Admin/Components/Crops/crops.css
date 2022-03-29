@@ -31,6 +31,7 @@
   /* flex-direction: ; */
 }
 .product-table {
+  border-radius: 20px;
   margin-left: 80px !important;
   background: #ffffff 0% 0% no-repeat padding-box !important;
   padding: 0px;
@@ -88,6 +89,9 @@
 }
 .action-button-group {
   display: flex;
+}
+.interact{
+  margin-left: 149px;
 }
 
 .action-menu .edit-button-div {
@@ -285,6 +289,7 @@ tr:hover .cancel-button-div {
     margin-left: 90px !important;
     height: 104px;
     width: 90%;
+    margin-bottom: 22px;
   }
   .welcome-name {
     margin-top: 50px;

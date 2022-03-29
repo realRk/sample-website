@@ -12,6 +12,7 @@ import Products from "./Components/Admin/Components/Products/products";
 import Crops from "./Components/Admin/Components/Crops/crops";
 import Admin from "./Components/Admin/admin";
 import Users from "./Components/Admin/Components/Users/Users";
+import Region from "./Components/Admin/Components/Regions";
 
 const { Header, Footer, Content } = Layout;
 function App() {
@@ -31,7 +32,7 @@ function App() {
             <Route path="/admin" element={<Products />} />
             <Route path="/admin/products" element={<Products />} />
             <Route path="/admin/crop" element={<Crops />} />
-            <Route path="/admin/region" element={<Products />} />
+            <Route path="/admin/region" element={<Region />} />
             <Route path="/admin/user" element={<Users />} />
           </Route>
           {/* <Route path="/crop" element={<Products />} /> 

@@ -20,11 +20,17 @@ const Crops = () => {
   const [newProductClicked, setNewProductClicked] = useState(false);
   const [newProductSlNo, setNewSlNo] = useState("");
   const [tableData, setTableData] = useState([]);
+  const [current, setCurrent] = useState(1);
   //context
   const { state, createCrops, getCrops, updateCrops, deleteProduct } =
     useAdminUiContext();
   let { brands, crops, states, user } = state;
-  console.log(user);
+  let { count } = crops;
+  let pagination = {
+    total: Number(count),
+    pageSize: 10,
+    current: current,
+  };
   useEffect(() => {
     setTableData(crops.data);
   }, [crops]);
@@ -56,16 +62,7 @@ const Crops = () => {
       case "isActive":
         return (
           <div className="action-menu">
-              {/* <div className="active-div">
-                <Switch
-                  // onChange={(value) => {
-                  //   changeActiveStatus(record, value);
-                  // }}
-                  // defaultChecked={record.isActive ? true : false}
-                />
-                <span> {record.isActive ? "Active" : "In-Active"}</span>
-              </div> */}
-            <div className="action-button-group">
+            <div className="action-button-group interact">
               {(newProductClicked && newProductSlNo === record.id) ||
               editingKey === record.id ? (
                 <React.Fragment>
@@ -259,7 +256,7 @@ const Crops = () => {
       title: "STATUS",
       key: "isActive",
       dataIndex: "isActive",
-      // editable: true,
+      editable: true,
       fixed: "right",
       width: 300,
       render: (_, record) => (
@@ -397,11 +394,17 @@ const Crops = () => {
         getCrops()      }
     });
   }, []);
+  const handleTableChange = (pagination, filters, sorter) => {
+    let { current, pageSize, total } = pagination;
+    setCurrent(current);
+    let skip = (current - 1) * 10;
+    getCrops({ skip: skip });
+  };
   return (
     <div>
       {/* <Spin/> */}
       <div className="welocome-name-div">
-        <span className="welcome-name"> Welcome Charles Xavier </span>
+      <span className="welcome-name"> {`Welcome ${localStorage.getItem('user_name')}`} </span>
       </div>
       <div className="products-header-bar">
         <span className="products-label">Crops</span>
@@ -458,6 +461,8 @@ const Crops = () => {
           className="product-table"
           scroll={{ x: 760, y: 450 }}
           key="sl_no"
+          pagination={pagination}
+          onChange={handleTableChange}
         />
       </Form>
     </div>

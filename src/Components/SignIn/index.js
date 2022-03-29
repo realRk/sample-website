@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Input, Select, Button, Row, Col, Form } from "antd";
+import { Input, Select, Button, Row, Col, Form, notification, message } from "antd";
 import {
   UserOutlined,
   LockOutlined,
@@ -12,23 +12,31 @@ const { Option } = Select;
 const SignIn = ({ onModeChange }) => {
   const navigate = useNavigate();
   const [form] = Form.useForm();
-  const { userSignIn,state } = useAuthUiContext();
-  let {user} = state
-  useEffect(()=>{
-    console.log(user)
-    user?.access_token&&navigate('/admin')
-    user?.access_token&&localStorage.setItem('access_token',user?.access_token)
-  },[user])
+  const { userSignIn, state } = useAuthUiContext();
+  let { user } = state;
+  const openNotificationWithIcon = (type,title,message) => {
+    notification[type]({
+      message: `${title}`,
+      description:`${message}`
+    });
+  };
+  useEffect(() => {
+    console.log(user);
+    let userName = user?.userData?.displayName;
+    user?.access_token &&
+      localStorage.setItem("access_token", user?.access_token);
+    user?.access_token && localStorage.setItem("user_name", userName);
+    user?.access_token&&openNotificationWithIcon('success','Login success','')
+    user?.access_token && navigate("/admin");
+  }, [user]);
   const onLoginButtonClicked = (values) => {
-    let {email,password} = values
+    let { email, password } = values;
     let params = {
-      email:email,
-      password:password
-    }
-    if(userSignIn(params)){
-      alert("success")
-      navigate('/admin')
-    }
+      email: email,
+      password: password,
+    };
+    userSignIn(params,()=>openNotificationWithIcon('warning','Login failed',''))
+
   };
   return (
     <div className="container-fluid sign-in-div">

@@ -1,12 +1,38 @@
+.UserWrapper {
+    .spinner {
+            position: absolute;
+            top: 60%;
+            transform: translate(0, -50%);
+    }
+    .ant-pagination {
+        margin-left: 72px;
+        float: left;
+        .ant-pagination-item-link {
+            border: none !important;
+            background: #ffffff 0% 0% no-repeat padding-box !important;
+            color: black !important;
+        }
+        .ant-pagination-item {
+            border: 0;
+        }
+        .ant-pagination-item.ant-pagination-item-active  {
+            background-color: black;
+            border-radius: 5px;
+            a {
+                color: white;
+            }
+        }
+    }
+}
 .WelcomeCaption {
-    margin-top: 60px;
+    margin-top: 26px;
     p {
         display: flex;
         justify-content: flex-end; 
         color: #212121;
         font-size: 20px;
         font-weight: 300;
-        padding-right: 20px;
+        padding-right: 67px;
         span {
             margin-left: 10px;
             font-weight: 500;
@@ -16,7 +42,7 @@
 .user-header-bar {
     display: flex;
     font: normal normal normal 32px/56px Outfit;
-    padding: 0 16px 0px 24px;
+    padding: 0 66px 0px 66px;
     font-size: 32px;
     color: #212121;
     .user-header-bar-actions {
@@ -39,7 +65,8 @@
 }
 
 .userListWrapper {
-    margin: 20px;
+    margin: 34px 56px;
+    min-height: 680px;
     background-color: #ffffff;
     border-radius: 15px;
     .site-card-wrapper {
@@ -135,6 +162,7 @@
         .cancelButton {
             text-transform: uppercase;
             cursor: pointer;
+            font-weight: 700;
             margin-right: 10px;
             background: transparent;
             border: 0;

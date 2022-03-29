@@ -17,10 +17,12 @@ export function AuthUIProvider({ children, authUIEvents }) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const values = {
     state: state,
-    userSignIn:(params)=>{
+    userSignIn:(params,callback)=>{
       axios.post(`${config.BASE_URL}/auth/login`,{...params}).then((resp) => {
         dispatch({ type: actions.USER_LOGIN, payload: resp.data });
-      });
+      }).catch(err=>{
+        console.log(err)
+        callback()})
     }
   };
   return (
