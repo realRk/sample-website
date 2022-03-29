@@ -13,7 +13,7 @@ export default function TextField({
   value,
 }) {
   return (
-    <div className="m-2">
+    <div className={styles.m2}>
       <p className={styles.label}>
         {label} {mandatory && <span>*</span>}
       </p>
@@ -25,7 +25,7 @@ export default function TextField({
         disabled={disabled}
         value={value}
       />
-      {errors && <pre className="text-danger">{errors}</pre>}
+      {errors && <pre className={styles.textDanger}>{errors}</pre>}
     </div>
   );
 }

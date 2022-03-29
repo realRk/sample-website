@@ -4,6 +4,7 @@ import SignIn from "../SignIn";
 import SignUp from "../SignUp";
 import SliderDiv from "./slider";
 import { isEqual } from "lodash";
+import { AuthUIProvider } from "./AuthUIContext";
 
 const UserAuthenticationPage = () => {
   const [currentWidth, setCurrentWidth] = useState();
@@ -32,7 +33,7 @@ const UserAuthenticationPage = () => {
     resizeObserver.observe(document.querySelector(".mainLayout"));
   };
   useEffect(() => {
-    console.log(currentWidthRef.current, "hahahahah");
+    // console.log(currentWidthRef.current, "hahahahah");
   }, [currentWidthRef]);
   useEffect(() => {
     resizeWatcher();
@@ -121,22 +122,24 @@ const UserAuthenticationPage = () => {
     }
   };
   return (
-    <div style={{ position: "relative", backgroundColor: "#f7f7f7" }}>
-      <SliderDiv />
-      <Row gutter={[8, 8]} ref={elementRef}>
-        <Col lg={12} sm={24} xs={24} className="sign-up-div-col">
-          <SignUp onModeChange={moveDivToLeft} />
-        </Col>
-        <Col
-          lg={12}
-          xs={{ push: 1 }}
-          sm={{ push: 0 }}
-          className="sign-in-div-col"
-        >
-          <SignIn onModeChange={moveDivToRight} />
-        </Col>
-      </Row>
-    </div>
+    <AuthUIProvider>
+      <div style={{ position: "relative", backgroundColor: "#f7f7f7" }}>
+        <SliderDiv />
+        <Row gutter={[8, 8]} ref={elementRef}>
+          <Col lg={12} sm={24} xs={24} className="sign-up-div-col">
+            <SignUp onModeChange={moveDivToLeft} />
+          </Col>
+          <Col
+            lg={12}
+            xs={{ push: 1 }}
+            sm={{ push: 0 }}
+            className="sign-in-div-col"
+          >
+            <SignIn onModeChange={moveDivToRight} />
+          </Col>
+        </Row>
+      </div>
+    </AuthUIProvider>
   );
 };
 export default UserAuthenticationPage;

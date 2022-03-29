@@ -4,10 +4,10 @@ import React from "react";
 import Dropdown from "../Dropdown";
 import TextField from "../TextField";
 
-export default function BookingFarmInformationForm({ styles, setTab, tab }) {
+export default function BookingFarmInformationForm({ styles, setTab }) {
   return (
     <>
-      <Row className="mt-3" align="middle">
+      <Row className={styles.mt3} align="middle">
         <Col xl={12} lg={12} md={12} sm={24} xs={24}>
           <TextField label="Farm Name" placeholder="Enter famer name" />
           <TextField label="Sign at gate" />
@@ -22,7 +22,7 @@ export default function BookingFarmInformationForm({ styles, setTab, tab }) {
               <TextField label="LONGITUDE" />
             </Col>
           </Row>
-          <Row align="middle" justify="space-between" className="mt-2">
+          <Row align="middle" justify="space-between" className={styles.mt2}>
             <Col span={24}>
               <p className={styles.label}>
                 PREFERRED WEEK FOR THE JOB EXECUTION *
@@ -40,7 +40,7 @@ export default function BookingFarmInformationForm({ styles, setTab, tab }) {
           </Row>
         </Col>
         <Col xl={12} lg={12} md={12} sm={24} xs={24}>
-          <div className="mx-2">
+          <div className={styles.mx2}>
             <p className={styles.label}>PICK YOUR FARM LOCATION</p>
           </div>
           <div className={styles.mapWrap}>
@@ -54,9 +54,9 @@ export default function BookingFarmInformationForm({ styles, setTab, tab }) {
       </Row>
       <div className={styles.footerBtn}>
         <PlusOutlined />
-        <p className="mb-0 mx-2">ADD ANOTHER FARM</p>
+        <p className={styles.mb0mx2}>ADD ANOTHER FARM</p>
       </div>
-      <div className="d-flex w-100 justify-content-between align-items-center p-2">
+      <div className={styles.footerBtnWrap}>
         <Button className={styles.prevBtn} onClick={() => setTab(1)}>
           <LeftOutlined /> Previous
         </Button>

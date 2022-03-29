@@ -46,7 +46,10 @@ const HeaderMenu = () => {
           <l1 className="header-list-default-style header-menu-option about-us">
             <a href="#">Services</a>
           </l1>
-          <l1 className="header-list-default-style header-menu-option about-us">
+          <l1
+            onClick={() => navigate("/pricing")}
+            className="header-list-default-style header-menu-option about-us"
+          >
             <a href="#">Pricing</a>
           </l1>
           <l1 className="header-list-default-style header-menu-option about-us">
@@ -64,10 +67,10 @@ const HeaderMenu = () => {
             </Button>
           </l1>
           <l1 className="hamburger-menu-col">
-              <MenuOutlined
-                className="hamburger-menu"
-                onClick={changeMenuSlidebarStyle}
-              />
+            <MenuOutlined
+              className="hamburger-menu"
+              onClick={changeMenuSlidebarStyle}
+            />
           </l1>
         </ul>
       </nav>
@@ -75,7 +78,12 @@ const HeaderMenu = () => {
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div className="hamburger-menu-items first">About Us</div>
           <div className="hamburger-menu-items">Services</div>
-          <div className="hamburger-menu-items">Pricing</div>
+          <div
+            className="hamburger-menu-items"
+            onClick={() => navigate("/pricing")}
+          >
+            Pricing
+          </div>
           <div className="hamburger-menu-items">Contact Us</div>
           <div className="hamburger-menu-items">FAQ</div>
           <div>

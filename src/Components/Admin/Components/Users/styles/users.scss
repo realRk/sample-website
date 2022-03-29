@@ -1,0 +1,155 @@
+.WelcomeCaption {
+    margin-top: 60px;
+    p {
+        display: flex;
+        justify-content: flex-end; 
+        color: #212121;
+        font-size: 20px;
+        font-weight: 300;
+        padding-right: 20px;
+        span {
+            margin-left: 10px;
+            font-weight: 500;
+        }
+    }
+}
+.user-header-bar {
+    display: flex;
+    font: normal normal normal 32px/56px Outfit;
+    padding: 0 16px 0px 24px;
+    font-size: 32px;
+    color: #212121;
+    .user-header-bar-actions {
+        margin-left: auto;     
+        display: flex;   
+        align-items: center;
+        .UserAddButton {
+                background: transparent linear-gradient(270deg, #86D400 0%, #59A506 100%) 0% 0% no-repeat padding-box;
+                border-radius: 8px ;
+                font-size: 12px;
+                font-weight: 600;
+                color: #ffffff ;
+                margin-left: 20px;
+                height: 45px;
+                .add {
+                  margin: 0px 12px;
+                }
+        }
+    }
+}
+
+.userListWrapper {
+    margin: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    .site-card-wrapper {
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+    .userCard {
+        margin-top: 25px;
+        border-radius: 15px;
+    }
+    .cardTopBar {
+        display: flex;
+        justify-content: space-between;
+        .userInfo {
+            display: flex;
+            align-items: center;
+            p{
+                margin: 0 0 0 17px;
+                font-weight: 700;
+            }
+        }
+        button {
+            border: 0;
+        }
+    }
+    .cardContent {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin-top: 20px;
+        itemIcon {
+            margin-left: 10px;
+        }
+        p {
+            margin: 0;
+
+        }
+        .items {
+            margin-left: 26px;
+            span {
+                color :#212121;
+                opacity: 0.5;
+            }
+            p {
+                font-weight: 500;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.userModal {
+        .ant-modal-content {
+            border-radius: 25px;
+        }
+        .ant-modal-footer {
+            button {
+                background-color: red;
+            }
+        }
+    }
+.addUserModal {
+    .fillwarn {
+            color: red;
+            margin-top: 10px;
+        }
+    h1 {
+        font-weight: 400;
+    }
+     label {
+            font-weight: 600;
+            font-size: 11px;
+        }
+    input {
+        height: 40px;
+        border-radius: 4px;
+    }
+    padding: 30px 18px;
+    .userName {
+        display: flex;
+        justify-content: space-between;
+        input {
+            width: 180px;
+        }
+    }
+    .loginUserInputs {
+        margin-top: 25px;
+    }
+    .actionButton {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 60px;
+        .cancelButton {
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-right: 10px;
+            background: transparent;
+            border: 0;
+            padding: 12px 20px;
+        }
+        .addButton {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        background-color: black;
+        cursor: pointer;
+        color: white;
+        border-radius: 10px;
+        border: 0;
+        padding: 12px 60px;
+    }
+    }
+} 

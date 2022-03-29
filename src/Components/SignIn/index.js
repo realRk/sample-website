@@ -1,50 +1,110 @@
-import React from "react";
-import { Input, Select, Button, Row, Col } from "antd";
+import React, { useEffect } from "react";
+import { Input, Select, Button, Row, Col, Form } from "antd";
 import {
   UserOutlined,
   LockOutlined,
   EnvironmentOutlined,
 } from "@ant-design/icons";
 import "./signIn.css";
+import { useNavigate } from "react-router-dom";
+import { useAuthUiContext } from "../UserAuthentication/AuthUIContext";
 const { Option } = Select;
 const SignIn = ({ onModeChange }) => {
+  const navigate = useNavigate();
+  const [form] = Form.useForm();
+  const { userSignIn,state } = useAuthUiContext();
+  let {user} = state
+  useEffect(()=>{
+    console.log(user)
+    user?.access_token&&navigate('/admin')
+    user?.access_token&&localStorage.setItem('access_token',user?.access_token)
+  },[user])
+  const onLoginButtonClicked = (values) => {
+    let {email,password} = values
+    let params = {
+      email:email,
+      password:password
+    }
+    if(userSignIn(params)){
+      alert("success")
+      navigate('/admin')
+    }
+  };
   return (
     <div className="container-fluid sign-in-div">
       <div>
         <span className="login-label-sign-in">Log in</span>
       </div>
-      <Row>
-        <Col>
-          <Input
-            prefix={<UserOutlined style={{ color: "#9c9c9c" }} />}
-            size="large"
-            placeholder="Email Address"
-            className="sign-up-email-input-style"
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Input
-            prefix={<LockOutlined style={{ color: "#9c9c9c" }} />}
-            type={"Password"}
-            size="large"
-            placeholder="Password"
-            className="sign-in-password-input-style"
-          />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <Input
-            prefix={<EnvironmentOutlined style={{ color: "#9c9c9c" }} />}
-            size="large"
-            placeholder="Enter your Postcode"
-            className="sign-in-password-input-style"
-          />
-        </Col>
-      </Row>
-      {/* <Row>
+      <Form
+        form={form}
+        autoComplete="off"
+        onFinish={onLoginButtonClicked}
+        onFinishFailed={(errorInfo) => {
+          console.log(errorInfo);
+        }}
+      >
+        <Row>
+          <Col>
+            <Form.Item
+              name="email"
+              rules={[
+                {
+                  required: "true",
+                  message: "email is required",
+                },
+              ]}
+            >
+              <Input
+                prefix={<UserOutlined style={{ color: "#9c9c9c" }} />}
+                size="large"
+                placeholder="Email Address"
+                className="sign-up-email-input-style"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: "true",
+                  message: "password is required",
+                },
+              ]}
+            >
+              <Input
+                prefix={<LockOutlined style={{ color: "#9c9c9c" }} />}
+                type={"Password"}
+                size="large"
+                placeholder="Password"
+                className="sign-in-password-input-style"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <Form.Item
+              name="postcode"
+              rules={[
+                {
+                  required: "true",
+                  message: "postcode is required",
+                },
+              ]}
+            >
+              <Input
+                prefix={<EnvironmentOutlined style={{ color: "#9c9c9c" }} />}
+                size="large"
+                placeholder="Enter your Postcode"
+                className="sign-in-password-input-style"
+              />
+            </Form.Item>
+          </Col>
+        </Row>
+        {/* <Row>
         <Col xl={{ span: 16 }}>
           <Select
             className="antd-custom-select-country-select"
@@ -63,60 +123,68 @@ const SignIn = ({ onModeChange }) => {
           </Select>
         </Col>
       </Row> */}
-      <Row>
-        <Col xl={{ span: 16 }}>
-          <Button type="text" className="sign-in-button">
-            LOG IN
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col xl={{ span: 16 }}>
-          <Button type="text" className="or-signup-href-link">
-            <span>Or login with</span>{" "}
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col className="auth-button-group">
-          <Button
-            icon={
-              <img
-                style={{ marginRight: "10px" }}
-                alt="google"
-                src={require("../../assets/glogo.png")}
-              />
-            }
-            type="text"
-            className="google-button-auth-zero"
-          >
-            Google
-          </Button>
-          <Button
-            icon={
-              <img
-                style={{ marginRight: "10px" }}
-                alt="google"
-                src={require("../../assets/vlogo.png")}
-              />
-            }
-            type="text"
-            className="vwork-button-auth-zero"
-          >
-            VWork
-          </Button>
-        </Col>
-      </Row>
-      <Row>
-        <Col xl={{ span: 16 }}>
-          <Button type="text" className="signup-href-link">
-            <span onClick={() => onModeChange(window.screen.width)}>
-              Not a registered user?{" "}
-              <span style={{ color: "#7ECC01" }}>Sign</span> up now!
-            </span>{" "}
-          </Button>
-        </Col>
-      </Row>
+        <Row>
+          <Col xl={{ span: 16 }}>
+            <Form.Item>
+              <Button
+                type="text"
+                className="sign-in-button"
+                // onClick={() => navigate("/customers-list")}
+                htmlType="submit"
+              >
+                LOG IN
+              </Button>
+            </Form.Item>
+          </Col>
+        </Row>
+        <Row>
+          <Col xl={{ span: 16 }}>
+            <Button type="text" className="or-signup-href-link">
+              <span>Or login with</span>{" "}
+            </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="auth-button-group">
+            <Button
+              icon={
+                <img
+                  style={{ marginRight: "10px" }}
+                  alt="google"
+                  src={require("../../assets/glogo.png")}
+                />
+              }
+              type="text"
+              className="google-button-auth-zero"
+            >
+              Google
+            </Button>
+            <Button
+              icon={
+                <img
+                  style={{ marginRight: "10px" }}
+                  alt="google"
+                  src={require("../../assets/vlogo.png")}
+                />
+              }
+              type="text"
+              className="vwork-button-auth-zero"
+            >
+              VWork
+            </Button>
+          </Col>
+        </Row>
+        <Row>
+          <Col xl={{ span: 16 }}>
+            <Button type="text" className="signup-href-link">
+              <span onClick={() => onModeChange(window.screen.width)}>
+                Not a registered user?{" "}
+                <span style={{ color: "#7ECC01" }}>Sign up</span> now!
+              </span>{" "}
+            </Button>
+          </Col>
+        </Row>
+      </Form>
     </div>
   );
 };

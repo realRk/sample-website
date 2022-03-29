@@ -867,7 +867,7 @@
 }
 @media only screen and (max-width: 768px) {
   .login-label-sign-up {
-    margin-left: 30px !important;
+    margin-left: 20px !important;
     text-align: left !important;
     height: 48px !important;
     font: normal normal normal 26px/93px Outfit !important;
@@ -877,7 +877,7 @@
     display: flex !important;
   }
   .signup-first-name {
-    left: 30px;
+    left: 20px;
     width: 340px !important;
     height: 55px;
     border-radius: 6px !important;
@@ -893,7 +893,7 @@
     font: normal normal normal 20px/28px Outfit !important;
   }
   .signup-second-name {
-    left: 30px;
+    left: 20px;
     width: 340px !important;
     height: 55px;
     border-radius: 6px !important;
@@ -904,14 +904,14 @@
     font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
-    margin-left: 30px !important;
+    margin-left: 20px !important;
   }
   .signup-second-name::placeholder {
     font: normal normal normal 20px/28px Outfit !important;
   }
   .sign-up-email-style {
-    left: 30px !important;
-    width: 710px !important;
+    left: 20px !important;
+    width: 700px !important;
     height: 55px !important;
     border-radius: 6px;
     opacity: 1;
@@ -927,7 +927,7 @@
     font: normal normal normal 20px/28px Outfit !important;
   }
   .signup-first-password {
-    left: 30px;
+    left: 20px;
     width: 340px !important;
     height: 55px;
     border-radius: 6px !important;
@@ -944,7 +944,7 @@
   }
 
   .signup-second-password {
-    left: 30px;
+    left: 20px;
     width: 340px !important;
     height: 55px;
     border-radius: 6px !important;
@@ -955,7 +955,7 @@
     font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
-    margin-left: 30px !important;
+    margin-left: 20px !important;
   }
   .signup-second-password::placeholder {
     font: normal normal normal 20px/28px Outfit !important;
@@ -985,7 +985,7 @@
     text-align: left !important;
   }
   .sign-up-button {
-    left: 30px;
+    left: 20px;
     width: 710px !important;
     height: 55px !important;
     background: #111111 0% 0% no-repeat padding-box !important;
@@ -999,7 +999,7 @@
     color: #ffffff !important;
   }
   .login-href-link {
-    left: 80px !important;
+    left: 70px !important;
     width: 610px;
     background-color: red;
     margin-top: 45px;
@@ -1012,16 +1012,19 @@
 }
 
 @media only screen and (max-width: 576px) {
+  /* .sign-up-div-col{
+    margin-left: 40px;
+  } */
   .signup-first-name {
-    left: 10px;
-    width: 370px !important;
+    left: 25px;
+    width: 500px !important;
     height: 45px;
     border-radius: 6px !important;
     opacity: 1;
     text-align: start;
     border: 0.5px !important;
     margin-top: 38px !important;
-    font: normal normal bold 20px/28px Outfit !important;
+    font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
   }
@@ -1029,15 +1032,15 @@
     font: normal normal bold 20px/28px Outfit;
   }
   .signup-second-name {
-    left: 10px;
-    width: 370px !important;
+    left: 25px;
+    width: 500px !important;
     height: 45px;
     border-radius: 6px !important;
     opacity: 1;
     text-align: start;
     border: 0.5px !important;
     margin-top: 15px !important;
-    font: normal normal bold 20px/28px Outfit !important;
+    font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
     margin-left: 0px !important;
@@ -1046,15 +1049,15 @@
     font: normal normal bold 20px/28px Outfit;
   }
   .sign-up-email-style {
-    left: 10px !important;
-    width: 370px !important;
+    left: 25px !important;
+    width: 500px !important;
     height: 45px !important;
     border-radius: 6px;
     opacity: 1;
     text-align: start;
     border: 0.5px !important;
     margin-top: 15px !important;
-    font: normal normal bold 20px/28px Outfit;
+    font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
     margin-left: 0px;
@@ -1063,15 +1066,15 @@
     font: normal normal bold 20px/28px Outfit;
   }
   .signup-first-password {
-    left: 10px;
-    width: 370px !important;
+    left: 25px;
+    width: 500px !important;
     height: 45px;
     border-radius: 6px !important;
     opacity: 1;
     text-align: start;
     border: 0.5px !important;
     margin-top: 15px !important;
-    font: normal normal bold 20px/28px Outfit !important;
+    font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
   }
@@ -1080,15 +1083,15 @@
   }
 
   .signup-second-password {
-    /* left: 16px; */
-    width: 370px !important;
+    left: 40px;
+    width: 500px !important;
     height: 45px;
     border-radius: 6px !important;
     opacity: 1;
     text-align: start;
     border: 0.5px !important;
     margin-top: 15px !important;
-    font: normal normal bold 20px/28px Outfit !important;
+    font: normal normal normal 20px/28px Outfit !important;
     letter-spacing: 0px;
     color: #9c9c9c;
     margin-left: -15px !important;
@@ -1100,7 +1103,7 @@
   .antd-custom-select {
     width: 370px !important;
     height: 45px !important;
-    font: normal normal bold 20px/28px Outfit !important;
+    font: normal normal normal 20px/28px Outfit !important;
     margin-top: 15px !important;
     height: 75px !important;
     border: 0.5px !important;
@@ -1120,8 +1123,8 @@
     text-align: left !important;
   }
   .sign-up-button {
-    left: 10px;
-    width: 370px !important;
+    left: 25px;
+    width: 500px !important;
     height: 55px !important;
     background: #111111 0% 0% no-repeat padding-box !important;
     border-radius: 10px !important;
@@ -1129,12 +1132,12 @@
     margin-top: 30px;
     /* margin-left: 146px; */
     text-align: center;
-    font: normal normal bold 16px/24px Outfit !important;
+    font: normal normal normal 16px/24px Outfit !important;
     letter-spacing: 0px;
     color: #ffffff !important;
   }
   .login-href-link {
-    left: 10px !important;
+    left: 85px !important;
     width: 370px;
     background-color: red;
     margin-top: 25px;
@@ -1145,10 +1148,10 @@
     margin-bottom: 50%;
   }
   .login-label-sign-up {
-    margin-left: 10px !important;
+    margin-left: 25px !important;
     text-align: left !important;
     height: 48px !important;
-    font: normal normal bold 28px/93px Outfit !important;
+    font: normal normal normal 28px/93px Outfit !important;
     letter-spacing: 0px !important;
     color: #464646 !important;
     opacity: 1 !important;
@@ -1156,6 +1159,153 @@
   }
 }
 
+@media only screen and (max-width: 425px) {
+  /* .sign-up-div-col{
+    margin-left: 40px;
+  } */
+  .signup-first-name {
+    left: 5px;
+    width: 390px !important;
+    height: 45px;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 38px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+  }
+  .signup-first-name::placeholder {
+    font: normal normal bold 20px/28px Outfit;
+  }
+  .signup-second-name {
+    left: 5px;
+    width: 390px !important;
+    height: 45px;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 15px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+    margin-left: 0px !important;
+  }
+  .signup-second-name::placeholder {
+    font: normal normal bold 20px/28px Outfit;
+  }
+  .sign-up-email-style {
+    left: 5px !important;
+    width: 390px !important;
+    height: 45px !important;
+    border-radius: 6px;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 15px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+    margin-left: 0px;
+  }
+  .sign-up-email-style::placeholder {
+    font: normal normal bold 20px/28px Outfit;
+  }
+  .signup-first-password {
+    left: 5px;
+    width: 390px !important;
+    height: 45px;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 15px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+  }
+  .signup-first-password::placeholder {
+    font: normal normal bold 20px/28px Outfit;
+  }
+
+  .signup-second-password {
+    left: 20px;
+    width: 390px !important;
+    height: 45px;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 15px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+    margin-left: -15px !important;
+  }
+  .signup-second-password::placeholder {
+    font: normal normal bold 20px/28px Outfit;
+  }
+
+  .antd-custom-select {
+    width: 370px !important;
+    height: 45px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    margin-top: 15px !important;
+    height: 75px !important;
+    border: 0.5px !important;
+  }
+  .antd-custom-select .ant-select-selector {
+    border: none !important;
+    height: 45px !important;
+    left: 10px !important;
+    align-items: left !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+    border-top-left-radius: 6px !important;
+    border-bottom-left-radius: 6px !important;
+  }
+  .ant-select {
+    height: 35px !important;
+    text-align: left !important;
+  }
+  .sign-up-button {
+    left: 5px;
+    width: 390px !important;
+    height: 55px !important;
+    background: #111111 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 30px;
+    /* margin-left: 146px; */
+    text-align: center;
+    font: normal normal normal 16px/24px Outfit !important;
+    letter-spacing: 0px;
+    color: #ffffff !important;
+  }
+  .login-href-link {
+    left: 15px !important;
+    width: 370px;
+    background-color: red;
+    margin-top: 25px;
+    text-align: center;
+    /* UI Properties */
+    border-radius: 20px;
+    opacity: 1;
+    margin-bottom: 50%;
+  }
+  .login-label-sign-up {
+    margin-left: 5px !important;
+    text-align: left !important;
+    height: 48px !important;
+    font: normal normal normal 28px/93px Outfit !important;
+    letter-spacing: 0px !important;
+    color: #464646 !important;
+    opacity: 1 !important;
+    display: flex !important;
+  }
+}
 @media only screen and (max-width: 414px) {
   .signup-first-name {
     left: 10px;

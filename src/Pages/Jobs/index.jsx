@@ -1,15 +1,17 @@
-import { Button, Col, Row } from "antd";
+/* eslint-disable jsx-a11y/no-distracting-elements */
+import { Button, Col, Row, Select } from "antd";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import BookingFarmInformationForm from "../../Components/BookingFarmInformationForm";
 import BookingJobDetailsForm from "../../Components/BookingJobDetailsForm";
 import BookingYourInformationForm from "../../Components/BookingYourInformationForm";
-import PriceListingComponent from "../../Components/PriceListingComponent";
+import MyJobsList from "../../Components/MyJobsList";
 import styles from "../Booking/booking.module.css";
 
 function MyJobs() {
   const [tab, setTab] = useState(1);
   const navigate = useNavigate();
+  const { Option } = Select;
   return (
     <div className={styles.bookingWrapper}>
       <div>
@@ -26,6 +28,31 @@ function MyJobs() {
             <p className={styles.head1}>My Jobs</p>
           </div>
           <div className={styles.div2}>
+            <div className={styles.dropdown}>
+              <Select
+                defaultValue="Select Booking Date"
+                bordered={false}
+                style={{ color: "#fff", fontFamily: "Outfit" }}
+              >
+                <Option value="jack">Jack</Option>
+                <Option value="lucy">Lucy</Option>
+                <Option value="Yiminghe">yiminghe</Option>
+              </Select>
+            </div>
+            <div className={styles.mx2} />
+            <div className={styles.dropdown}>
+              <Select
+                defaultValue="Select Status"
+                bordered={false}
+                style={{ color: "#fff", fontFamily: "Outfit" }}
+              >
+                <Option value="jack">Jack</Option>
+                <Option value="lucy">Lucy</Option>
+                <Option value="Yiminghe">yiminghe</Option>
+              </Select>
+            </div>
+            <div className={styles.mx2} />
+
             <Button
               className={styles.bookNowBtn}
               onClick={() => navigate("/booking")}
@@ -37,7 +64,7 @@ function MyJobs() {
         <div className={styles.content}>
           <Row>
             <Col xl={8} lg={8} md={10} sm={24} xs={24}>
-              dfsdfsdf
+              <MyJobsList />
             </Col>
             <Col xl={16} lg={16} md={14} sm={24} xs={24}>
               <div className={styles.form}>

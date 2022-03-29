@@ -12,6 +12,11 @@
   padding-bottom: 155px;
   /* margin-left: 100px !important; */
 }
+.sign-up-email-input-style.ant-input-affix-wrapper-lg.ant-input-affix-wrapper-status-error {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: red !important;
+}
 .sign-up-email-input-style {
   left: 20px !important;
   width: 630px !important;
@@ -28,6 +33,9 @@
   color: #9c9c9c;
   /* margin-left: 40px; */
 }
+.ant-form-item {
+  margin-bottom: 0px !important;
+}
 .sign-up-email-input-style .ant-input{
   left: 20px !important;
   width: 550px !important;
@@ -38,7 +46,7 @@
   padding-top: 0px !important;
   font: normal normal normal 20px/28px Outfit !important;
   letter-spacing: 0px;
-  color: #9c9c9c;
+  color: #000000d9;
 }
 .sign-up-email-input-style::placeholder {
   font: normal normal normal 28px/28px Outfit !important;
@@ -66,7 +74,12 @@
   border: 0.5px !important;
   font: normal normal normal 20px/28px Outfit !important;
   letter-spacing: 0px;
-  color: #9c9c9c;
+  color: #000000d9;
+}
+.sign-in-password-input-style.ant-input-affix-wrapper-lg.ant-input-affix-wrapper-status-error {
+  border-width: 1px !important;
+  border-style: solid !important;
+  border-color: red !important;
 }
 .sign-up-password-input-style::placeholder {
   font: normal normal normal 16px/28px Outfit !important;
@@ -91,7 +104,7 @@
   left: 25px;
 }
 .or-signup-href-link {
-  left: 25px !important;
+  left: 55px !important;
   margin-top: 20px;
 }
 .auth-button-group{
@@ -362,7 +375,7 @@
     left: 25px;
   }
   .or-signup-href-link {
-    left: 25px !important;
+    left: 55px !important;
     margin-top: 20px;
   }
 
@@ -548,7 +561,7 @@
 }
 @media only screen and (max-width: 1024px) {
   .sign-in-div {
-    margin-left: 50px;
+    margin-left: 50px !important;
   }
   .login-label-sign-in {
     margin-left: 15px !important;
@@ -683,11 +696,11 @@
   }
 }
 @media only screen and (max-width: 914px) {
-  /* .sign-in-div-col{
-    margin: 0px auto;
-  } */
+  .sign-in-div-col{
+    margin-left: 0px !important;
+  }
   .sign-up-email-input-style {
-    left: 90px !important;
+    left: 20px !important;
     width: 710px !important;
     height: 55px !important;
     border-radius: 6px !important;
@@ -709,7 +722,7 @@
   }
 
   .login-label-sign-in {
-    margin-left: 90px !important;
+    margin-left: 20px !important;
     text-align: left !important;
     height: 48px !important;
     font: normal normal normal 26px/93px Outfit !important;
@@ -719,7 +732,7 @@
     display: flex !important;
   }
   .sign-in-password-input-style {
-    left: 90px !important;
+    left: 20px !important;
     width: 710px !important;
     height: 55px !important;
     border-radius: 6px !important;
@@ -741,7 +754,7 @@
   .antd-custom-select-country-select {
     width: 710px !important;
     height: 55px !important;
-    left: 80px !important;
+    left: 20px !important;
     /* padding-top: 10px!important; */
     font: normal normal normal 20px/28px Outfit !important;
     color: #464646 !important;
@@ -757,7 +770,7 @@
     border-bottom-right-radius: 6px !important;
   }
   .sign-in-button {
-    left: 90px;
+    left: 20px;
     width: 710px !important;
     height: 65px !important;
     background: #111111 0% 0% no-repeat padding-box !important;
@@ -771,7 +784,7 @@
     color: #ffffff !important;
   }
   .or-signup-href-link {
-    left: 390px !important;
+    left: 320px !important;
     margin-top: 20px;
   }
   .auth-button-group{
@@ -780,7 +793,7 @@
     width: 710px !important;
   }
   .google-button-auth-zero {
-    left:90px;
+    left:20px;
     width: 350px !important;
     height: 65px !important;
     background: #fff 0% 0% no-repeat padding-box !important;
@@ -793,7 +806,7 @@
     color: #464646 !important;
   }
   .vwork-button-auth-zero {
-    left: 90px;
+    left: 20px;
     width: 350px !important;
     height: 65px !important;
     background: #fff 0% 0% no-repeat padding-box !important;
@@ -808,13 +821,16 @@
   }
   .signup-href-link {
     margin-top: 35px;
-    left: 325px;
+    left: 255px;
   }
 }
 @media only screen and (max-width: 768px) {
+  .sign-in-div-col{
+    margin-left: -30px !important;
+  }
   .sign-up-email-input-style {
-    left: 30px !important;
-    width: 710px !important;
+    left: 0px !important;
+    width: 700px !important;
     height: 55px !important;
     border-radius: 6px !important;
     opacity: 1;
@@ -829,8 +845,11 @@
   .sign-up-email-input-style::placeholder {
     font: normal normal normal 20px/28px Outfit !important;
   }
+  .sign-up-email-input-style .ant-input {
+    width:680px;
+  }
   .login-label-sign-in {
-    margin-left: 30px !important;
+    margin-left: 0px !important;
     text-align: left !important;
     height: 48px !important;
     font: normal normal normal 26px/93px Outfit !important;
@@ -840,8 +859,8 @@
     display: flex !important;
   }
   .sign-in-password-input-style {
-    left: 30px !important;
-    width: 710px !important;
+    left: 0px !important;
+    width: 700px !important;
     height: 55px !important;
     border-radius: 6px !important;
     opacity: 1;
@@ -874,8 +893,8 @@
     border-bottom-right-radius: 6px !important;
   }
   .sign-in-button {
-    left: 30px;
-    width: 710px !important;
+    left: 0px;
+    width: 700px !important;
     height: 65px !important;
     background: #111111 0% 0% no-repeat padding-box !important;
     border-radius: 10px !important;
@@ -888,7 +907,7 @@
     color: #ffffff !important;
   }
   .or-signup-href-link {
-    left: 330px !important;
+    left: 300px !important;
     margin-top: 20px;
   }
   .auth-button-group{
@@ -897,7 +916,7 @@
     width: 710px !important;
   }
   .google-button-auth-zero {
-    left:30px;
+    left:0px;
     width: 350px !important;
     height: 65px !important;
     background: #fff 0% 0% no-repeat padding-box !important;
@@ -910,7 +929,7 @@
     color: #464646 !important;
   }
   .vwork-button-auth-zero {
-    left: 30px;
+    left: 20px;
     width: 350px !important;
     height: 65px !important;
     background: #fff 0% 0% no-repeat padding-box !important;
@@ -925,10 +944,267 @@
   }
   .signup-href-link {
     margin-top: 35px;
-    left: 275px;
+    left: 235px;
   }
 }
+
 @media only screen and (max-width: 576px) {
+  .sign-up-email-input-style {
+    left: 5px !important;
+    width: 500px !important;
+    height: 55px !important;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 38px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+    /* margin-left: 40px; */
+  }
+  .sign-up-email-input-style::placeholder {
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .sign-up-email-input-style .ant-input{
+    width: 440px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .login-label-sign-in {
+    margin-left: 5px !important;
+    text-align: left !important;
+    height: 48px !important;
+    font: normal normal  28px/93px Outfit !important;
+    letter-spacing: 0px !important;
+    color: #464646 !important;
+    opacity: 1 !important;
+    display: flex !important;
+  }
+  .sign-in-password-input-style {
+    left: 5px !important;
+    width: 500px !important;
+    height: 55px !important;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 20px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+  }
+  .sign-in-password-input-style::placeholder {
+    font: normal normal bold 20px/28px Outfit !important;
+  }
+  .sign-in-password-input-style .ant-input{
+    width: 440px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .antd-custom-select-country-select {
+    width: 370px !important;
+    height: 55px !important;
+    font: normal normal bold 20px/28px Outfit !important;
+    color: #464646 !important;
+    margin-top: 20px !important;
+    height: 75px !important;
+    border: 0.5px !important;
+  }
+  .antd-custom-select-country-select .ant-select-selector {
+    border: none !important;
+    height: 55px !important;
+    left: -10px !important;
+    align-items: left !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+  }
+  .sign-in-button {
+    left: 5px;
+    width: 500px !important;
+    height: 65px !important;
+    background: #111111 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 42px !important;
+    /* margin-left: 146px; */
+    text-align: center;
+    font: normal normal bold 16px/24px Outfit !important;
+    letter-spacing: 0px;
+    color: #ffffff !important;
+  }
+  .or-signup-href-link {
+    left: 200px !important;
+    margin-top: 20px;
+  }
+
+  .auth-button-group{
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 710px !important;
+  }
+  .google-button-auth-zero {
+    left:0px;
+    width: 240px !important;
+    height: 65px !important;
+    background: #fff 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 32px !important;
+    text-align: center;
+    font: normal normal 500 16px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #464646 !important;
+  }
+  .vwork-button-auth-zero {
+    left: 10px;
+    width: 240px !important;
+    height: 65px !important;
+    background: #fff 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 32px !important;
+    /* margin-left: 146px; */
+    text-align: center;
+    font: normal normal 500 16px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #464646 !important;
+  }
+
+  .signup-href-link {
+    margin-top: 35px;
+    left: 125px;
+  }
+}
+
+
+@media only screen and (max-width: 425px) {
+  .sign-up-email-input-style {
+    left: -30px !important;
+    width: 390px !important;
+    height: 45px !important;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 38px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+    /* margin-left: 40px; */
+  }
+  .sign-up-email-input-style::placeholder {
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .sign-up-email-input-style .ant-input{
+    width: 320px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .login-label-sign-in {
+    margin-left: -30px !important;
+    text-align: left !important;
+    height: 48px !important;
+    font: normal normal  28px/93px Outfit !important;
+    letter-spacing: 0px !important;
+    color: #464646 !important;
+    opacity: 1 !important;
+    display: flex !important;
+  }
+  .sign-in-password-input-style {
+    left: -30px !important;
+    width: 390px !important;
+    height: 45px !important;
+    border-radius: 6px !important;
+    opacity: 1;
+    text-align: start;
+    border: 0.5px !important;
+    margin-top: 20px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #9c9c9c;
+  }
+  .sign-in-password-input-style::placeholder {
+    font: normal normal bold 20px/28px Outfit !important;
+  }
+  .sign-in-password-input-style .ant-input{
+    width: 300px !important;
+    font: normal normal normal 20px/28px Outfit !important;
+  }
+  .antd-custom-select-country-select {
+    width: 370px !important;
+    height: 55px !important;
+    font: normal normal bold 20px/28px Outfit !important;
+    color: #464646 !important;
+    margin-top: 20px !important;
+    height: 75px !important;
+    border: 0.5px !important;
+  }
+  .antd-custom-select-country-select .ant-select-selector {
+    border: none !important;
+    height: 55px !important;
+    left: -10px !important;
+    align-items: left !important;
+    border-top-right-radius: 6px !important;
+    border-bottom-right-radius: 6px !important;
+  }
+  .sign-in-button {
+    left: -30px;
+    width: 390px !important;
+    height: 55px !important;
+    background: #111111 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 42px !important;
+    /* margin-left: 146px; */
+    text-align: center;
+    font: normal normal bold 16px/24px Outfit !important;
+    letter-spacing: 0px;
+    color: #ffffff !important;
+  }
+  .or-signup-href-link {
+    left: 110px !important;
+    margin-top: 20px;
+  }
+
+  .auth-button-group{
+    display: flex !important;
+    justify-content: space-between !important;
+    width: 710px !important;
+  }
+  .google-button-auth-zero {
+    left:-30px;
+    width: 240px !important;
+    height: 65px !important;
+    background: #fff 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 32px !important;
+    text-align: center;
+    font: normal normal 500 16px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #464646 !important;
+  }
+  .vwork-button-auth-zero {
+    left: 10px;
+    width: 240px !important;
+    height: 65px !important;
+    background: #fff 0% 0% no-repeat padding-box !important;
+    border-radius: 10px !important;
+    opacity: 1;
+    margin-top: 32px !important;
+    /* margin-left: 146px; */
+    text-align: center;
+    font: normal normal 500 16px/28px Outfit !important;
+    letter-spacing: 0px;
+    color: #464646 !important;
+  }
+
+  .signup-href-link {
+    margin-top: 35px;
+    left: 45px;
+  }
+}
+
+
+@media only screen and (max-width: 412px) {
   .sign-up-email-input-style {
     left: -10px !important;
     width: 370px !important;

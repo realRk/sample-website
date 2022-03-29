@@ -7,7 +7,7 @@
   width: 0%;
   height: 100vh;
   background-color: #f7f7f7f7;
-  z-index: 1;
+  z-index: 2;
   top:110px
   /* opacity: 0; */
 }
@@ -21,7 +21,7 @@
   position:fixed;
   background-color: #f7f7f7;
   top:0px;
-  z-index: 1;
+  z-index: 2;
 }
 .header-button-style {
   border: 2px solid #161616 !important;
@@ -143,7 +143,43 @@ ul li::marker{
   }
 }
 
+@media only screen and (max-width: 1366px) {
+  .menu-bar-style{
+    /* background-color: red !important;  */
+  }
+  .header-list-default-style {
+    text-align: center;
+    font: normal normal 400 19px/25px Outfit, Regular !important;
+    letter-spacing: 0px;
+    margin-left: 0px !important;
+    color: #111111 !important;
+    opacity: 1;
+    border: none;
+    /* background-color: red; */
+  }
+  .seed-logo {
+    width: 159px;
+    margin-left: 45px;
+    margin-right: 35px;
+  }
+  .header-button-style {
+    border: 2px solid #161616 !important;
+    background-color: #f7f7f7 !important;
+    width: 185.13px !important;
+    border-radius: 8px !important;
+    height: 60px !important;
+    font: normal normal 900 16px/24px Outfit !important;
+    letter-spacing: 0px !important;
+    color: #111111 !important;
+    margin-top: 22px !important;
+    margin-left: 105% !important;
+  }
+}
+
 @media only screen and (max-width: 1336px) {
+  .menu-bar-style{
+    /* background-color: red !important;  */
+  }
   .header-list-default-style {
     text-align: center;
     font: normal normal 400 20px/25px Outfit, Regular;
@@ -172,7 +208,7 @@ ul li::marker{
     margin-left: 85% !important;
   }
 }
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1024px) {
   .menu-bar-style{
     padding-left: 0px;
   }
@@ -213,8 +249,8 @@ ul li::marker{
   }
 }
 
-@media only screen and (max-width: 914px) {
-
+@media only screen and (max-width: 912px) {
+  
   .seed-logo{
     width:155px !important;
   }
@@ -224,9 +260,9 @@ ul li::marker{
   .header-button-style {
     display: none !important;
   }
-  .menu-bar-style {
-    background-color: #f7f7f7 !important;
-  }
+  /* .menu-bar-style {
+    width: 912px !important;
+  } */
   .hamburger-menu {
     font-size: 24px;
     visibility: visible !important;
@@ -237,6 +273,7 @@ ul li::marker{
   .hamburger-menu-col {
     display: block !important;
     margin-top: 50px;
+    /* z-index: 1; */
     position:absolute;
     right: 40px;
   }
@@ -267,28 +304,27 @@ ul li::marker{
     color: green;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
   .header-list-default-style {
     display: none !important;
   }
   .header-button-style {
     display: none !important;
   }
-  .menu-bar-style {
-    background-color: #f7f7f7 !important;
-  }
+  /* .menu-bar-style {
+    width: 768px !important;
+  } */
   .hamburger-menu {
     font-size: 24px;
     visibility: visible !important;
     display: block !important;
-    /* height: 30px !important; */
-    /* width: 30px !important; */
+    height: 30px !important;
+    width: 30px !important;
   }
   .hamburger-menu-col {
-    display: block !important;
+    right: 30px;
   }
   .hamburger-menu-items {
-    /* margin-top: 20px; */
     height: 50px;
     font: normal normal 300 24px/12px Outfit, Regular !important;
   }
@@ -325,6 +361,7 @@ ul li::marker{
     display: none !important;
   }
   .menu-bar-style {
+    width:412px !important;
     background-color: #f7f7f7 !important;
   }
   .hamburger-menu {
@@ -335,6 +372,8 @@ ul li::marker{
     /* width: 30px !important; */
   }
   .hamburger-menu-col {
+    width:42px;
+    right:0px;
     display: block !important;
   }
   .hamburger-menu-items {

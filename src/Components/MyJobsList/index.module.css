@@ -1,0 +1,38 @@
+.wrapper {
+  padding: 25px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.tableHeader {
+  margin-bottom: 0;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tableCell {
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.tag {
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.tagAssigned {
+  color: #7ecc01;
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+  margin-bottom: 0;
+}
+.tagUnAssigned {
+  color: #212121;
+  font-family: "Outfit", sans-serif;
+  font-size: 10px;
+  margin-bottom: 0;
+}

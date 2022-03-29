@@ -7,7 +7,7 @@ import TextField from "../TextField";
 export default function BookingYourInformationForm({ styles, setTab }) {
   return (
     <>
-      <Row className="mt-3">
+      <Row className={styles.mt3}>
         <Col xl={12} lg={12} md={12} sm={24} xs={24}>
           <TextField label="First name" placeholder="Enter first name" />
         </Col>
@@ -66,7 +66,7 @@ export default function BookingYourInformationForm({ styles, setTab }) {
           />
         </Col>
       </Row>
-      <div className="d-flex w-100 justify-content-end p-2">
+      <div className={styles.footerBtnWrap}>
         <Button className={styles.nextBtn} onClick={() => setTab(2)}>
           Next <RightOutlined />
         </Button>

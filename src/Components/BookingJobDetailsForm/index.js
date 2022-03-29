@@ -27,7 +27,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
           }
         >
           <Panel header="Farm 1" key="1">
-            <Row className="my-2" align="middle">
+            <Row className={styles.my2} align="middle">
               <Col xl={8} lg={8} md={8} sm={10} xs={10}>
                 <Dropdown label={"Crop type"} mandatory={false} />
               </Col>
@@ -35,7 +35,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
                 <TextField label={"Number of Varieties"} mandatory={false} />
               </Col>
               <Col xl={8} lg={8} md={8} sm={4} xs={4}>
-                <div className="w-100 d-flex justify-content-end">
+                <div className={styles.flexEnd}>
                   <Button shape="circle" icon={<DeleteOutlined />} />
                 </div>
               </Col>
@@ -93,7 +93,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
               </Col>
             </Row>
             <hr />
-            <Row className="my-2" align="middle">
+            <Row className={styles.my2} align="middle">
               <Col xl={8} lg={8} md={8} sm={10} xs={10}>
                 <Dropdown label={"Crop type"} mandatory={false} />
               </Col>
@@ -134,7 +134,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
             </Row>
             <div className={styles.footerBtn}>
               <PlusOutlined />
-              <p className="mb-0 mx-2">ADD ROW</p>
+              <p className={styles.mb0mx2}>ADD ROW</p>
             </div>
           </Panel>
         </Collapse>
@@ -214,7 +214,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
               </Col>
             </Row>
             <hr />
-            <Row className="my-2" align="middle">
+            <Row className={styles.my2} align="middle">
               <Col xl={8} lg={8} md={8} sm={10} xs={10}>
                 <Dropdown label={"Crop type"} mandatory={false} />
               </Col>
@@ -222,7 +222,7 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
                 <TextField label={"Number of Varieties"} mandatory={false} />
               </Col>
               <Col xl={8} lg={8} md={8} sm={4} xs={4}>
-                <div className="w-100 d-flex justify-content-end">
+                <div className={styles.flexEnd}>
                   <Button shape="circle" icon={<DeleteOutlined />} />
                 </div>
               </Col>
@@ -255,43 +255,40 @@ export default function BookingJobDetailsForm({ styles, setTab }) {
             </Row>
             <div className={styles.footerBtn}>
               <PlusOutlined />
-              <p className="mb-0 mx-2">ADD ROW</p>
+              <p className={styles.mb0mx2}>ADD ROW</p>
             </div>
           </Panel>
         </Collapse>
       </div>
-      <div className="p-3 d-flex flex-column">
+      <div className={styles.checkboxWrap}>
         <Checkbox>
-          <span className={styles.checkboxText}>
+          <p className={styles.checkboxText}>
             I acknowledge that diesel to operate SeedShield Generator is input
             required at the completion of this job and any chemical not supplied
             by SeedShield will incur additional charges
-          </span>
+          </p>
         </Checkbox>
-        <br />
         <Checkbox>
-          <span className={styles.checkboxText}>
+          <p className={styles.checkboxText}>
             Please note there will be a set up/relocation fee for any complete
             or partially complete job of 50 tonnes or less. <br />- CC24
             (smaller machine) $700 <br />- TS35 (larger machine) $1000
-          </span>
+          </p>
         </Checkbox>
-        <br />
         <Checkbox>
-          <span className={styles.checkboxText}>
+          <p className={styles.checkboxText}>
             Line Fee – Any Line of Grain less than 15 tonne will be charged at
             $150/line (excluding Canola Sizing and Speciality Seeds)
-          </span>
+          </p>
         </Checkbox>
-        <br />
         <Checkbox>
-          <span className={styles.checkboxText}>
+          <p className={styles.checkboxText}>
             Any chemical NOT supplied by SeedShield will incur an additional
             charge of $5/L.
-          </span>
+          </p>
         </Checkbox>
       </div>
-      <div className="d-flex w-100 justify-content-between align-items-center p-2">
+      <div className={style.btnWrap}>
         <Button className={styles.prevBtn} onClick={() => setTab(2)}>
           <LeftOutlined /> Previous
         </Button>

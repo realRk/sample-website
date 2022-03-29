@@ -10590,11 +10590,13 @@ _:-ms-fullscreen
 .ant-tabs-tab-remove:focus,
 .ant-tabs-tab-btn:active,
 .ant-tabs-tab-remove:active {
-  color: #096dd9;
+  color: #7ecc01;
 }
 .ant-tabs-tab-btn {
   outline: none;
   transition: all 0.3s;
+  color: #515151;
+  font-family: "Outfit", sans-serif;
 }
 .ant-tabs-tab-remove {
   flex: none;
@@ -10615,8 +10617,10 @@ _:-ms-fullscreen
   color: #40a9ff;
 }
 .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: #1890ff;
-  text-shadow: 0 0 0.25px currentcolor;
+  color: #292929;
+  text-shadow: 0 0 0.25px #292929;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
 }
 .ant-tabs-tab.ant-tabs-tab-disabled {
   color: rgba(0, 0, 0, 0.25);
@@ -25374,7 +25378,7 @@ textarea.ant-mentions {
   color: rgba(0, 0, 0, 0.85);
   font-weight: 500;
   text-align: left;
-  background: #fafafa;
+  background: #fff;
   border-bottom: 1px solid #f0f0f0;
   transition: background 0.3s ease;
 }
@@ -25465,11 +25469,12 @@ textarea.ant-mentions {
   background: #fafafa;
 }
 .ant-table-tbody > tr.ant-table-row-selected > td {
-  background: #e6f7ff;
-  border-color: rgba(0, 0, 0, 0.03);
+  background: #7ecc011a;
+  border-top: 0.5px solid #7ecc01;
+  border-bottom: 0.5px solid #7ecc01;
 }
 .ant-table-tbody > tr.ant-table-row-selected:hover > td {
-  background: #dcf4ff;
+  background: #7ecc011a;
 }
 .ant-table-summary {
   position: relative;

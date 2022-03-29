@@ -1,0 +1,140 @@
+.bookingWrapper {
+  background-color: #f7f7f7;
+}
+
+.marqueeText {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 0;
+  font-family: "Outfit", sans-serif;
+  white-space: nowrap;
+  margin: 10px 0;
+}
+
+.header {
+  height: 220px;
+  background: #7ecc01;
+  margin-top: -6px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.head1 {
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  font-size: 30px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.div1 {
+  width: 50%;
+  height: 100%;
+  margin-left: 5%;
+}
+.div2 {
+  width: 75%;
+  background: linear-gradient(270deg, #86d400 0%, #59a506 100%);
+  height: 100%;
+  -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  clip-path: polygon(30% 0, 1% 100%, 2500% 100%);
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  padding-right: 5%;
+}
+
+.jobsBtn {
+  text-transform: uppercase;
+  background-color: transparent !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  font-family: "Outfit", sans-serif !important;
+  padding: 20px !important;
+  border: 1px solid #fff !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.bookNowBtn {
+  text-transform: uppercase;
+  background-color: #ffffff !important;
+  color: #7ecc01 !important;
+  font-weight: 600 !important;
+  font-family: "Outfit", sans-serif !important;
+  padding: 20px !important;
+  border: 1px solid #fff !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.content {
+  padding: 0 5%;
+  padding-bottom: 50px;
+  width: 100%;
+  margin-top: -100px;
+}
+
+.searchWrap {
+  height: 45px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px !important;
+  color: #fff !important;
+  background-color: transparent !important;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+}
+
+.searchInput {
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+::placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+.form {
+  height: 100%;
+  border-radius: 20px;
+  padding: 40px;
+  background-color: #fff;
+}
+
+.tableHeader {
+  margin-bottom: 0;
+  font-family: "Outfit", sans-serif;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.tableCell {
+  font-family: "Outfit", sans-serif;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.paginationWrap {
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerText {
+  margin-bottom: 0;
+  margin-left: 10px;
+  color: #4f4f4f;
+  font-family: "Outfit", sans-serif;
+}

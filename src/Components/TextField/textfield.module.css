@@ -14,3 +14,11 @@
   border: 1px solid #dcdcdc;
   font-family: "Outfit", sans-serif;
 }
+
+.textDanger {
+  color: "red";
+}
+
+.m2 {
+  margin: 5px;
+}

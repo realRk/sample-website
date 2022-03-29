@@ -14,4 +14,12 @@
   border: 0 !important;
   font-family: "Outfit", sans-serif;
   width: 100%;
+  text-align: left;
+}
+.textDanger {
+  color: "red";
+}
+
+.m2 {
+  margin: 5px;
 }

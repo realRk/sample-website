@@ -17,3 +17,7 @@ code {
 svg {
   vertical-align: baseline !important;
 }
+
+.ant-tabs-ink-bar {
+  border-bottom: 2px solid #7ecc01 !important ;
+}
